@@ -4,21 +4,13 @@ from cell import Cell
 def main():
     win = Window(800, 600)
     
-    c = Cell(win)
-    c.has_left_wall = False
-    c.draw(50,100,50,100)
+    c1 = Cell(win)
+    c1.draw(50,100,50,100)
 
-    c = Cell(win)
-    c.has_right_wall = False
-    c.draw(125,175,50,200)
+    c2 = Cell(win)
+    c2.draw(125,175,50,200)
 
-    c = Cell(win)
-    c.has_bottom_wall = False
-    c.draw(200,250,50,100)
-
-    c = Cell(win)
-    c.has_top_wall = False
-    c.draw(275,325,50,100)
+    c1.draw_move(c2)
 
     win.wait_for_close()
 main()
